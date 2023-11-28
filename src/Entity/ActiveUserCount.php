@@ -7,7 +7,10 @@ use App\Repository\ActiveUserCountRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ActiveUserCountRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    order: ['id' => 'DESC'],
+    paginationClientItemsPerPage: true
+)]
 class ActiveUserCount
 {
     #[ORM\Id]
