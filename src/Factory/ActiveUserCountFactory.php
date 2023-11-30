@@ -48,7 +48,7 @@ final class ActiveUserCountFactory extends ModelFactory
     {
         return [
             'count' => self::faker()->randomNumber(),
-            'createdAt' => \DateTimeImmutable::createFromMutable(self::faker()->dateTime()),
+            'createdAt' => \DateTimeImmutable::createFromMutable(self::faker()->dateTimeBetween('-5 hours')),
             'serverId' => self::faker()->randomNumber(),
         ];
     }
