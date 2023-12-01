@@ -67,4 +67,10 @@ class ActiveUserCount
 
         return $this;
     }
+
+    public function __construct()
+    {
+        $this->createdAt = new \DateTimeImmutable();
+        $this->serverId = 1;
+    }
 }
